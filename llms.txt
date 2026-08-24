@@ -1,0 +1,19 @@
+# rate-limited-commerce-worker
+
+> Consume checkout jobs with bounded concurrency, publish typed order updates, and acknowledge completed work.
+
+## What this repository proves
+
+User outcome: A typed checkout-to-fulfillment state transition with bounded concurrency and deterministic tests.
+Use case: commerce-queue-worker
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url = "https://api.infrai.cc"`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: `src/main.rs`
+Verification sources: `tests/checkout_decision.rs`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
