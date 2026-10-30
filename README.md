@@ -5,7 +5,7 @@ export INFRAI_API_KEY=your_key
 cargo run
 ```
 
-This executable consumes paid-checkout jobs, limits starts to eight jobs per second, and runs at most four jobs concurrently. Infrai keeps the queue boundary behind one API and a single `INFRAI_API_KEY`; the worker remains a small Rust process with no queue SDK to install.
+This executable pulls paid-checkout jobs, caps starts at eight per second, and runs at most four concurrently. Infrai puts the queue boundary behind one API and a single `INFRAI_API_KEY`; the worker stays a small Rust process with no queue SDK to install.
 
 ## The checkout transition
 
